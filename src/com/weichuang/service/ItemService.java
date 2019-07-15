@@ -28,4 +28,8 @@ public class ItemService {
     public void deleteItems(String[] ids) {
         mapper.deleteItems(ids);
     }
+
+    public void addItem(Item item) {
+        mapper.addItem(item);
+    }
 }

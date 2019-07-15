@@ -31,4 +31,12 @@
         <property name="prefix" value="/WEB-INF/jsp/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+
+    <!--配置全局异常捕获器-->
+    <bean class="com.weichuang.exception.MyHandlerExceptionResolver"/>
+
+    <!--配置图片上传解析器 maxUploadSize默认单位为B   5M  1024 * 1024 * 5-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="400000"></property>
+    </bean>
 </beans>

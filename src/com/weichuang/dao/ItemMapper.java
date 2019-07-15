@@ -13,4 +13,6 @@ public interface ItemMapper {
     void updateItem(Item item);
 
     void deleteItems(String[] ids);
+
+    void addItem(Item item);
 }

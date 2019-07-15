@@ -29,8 +29,12 @@
             </if>
 
             <if test="createtime != null and createtime != ''">
-                createtime = #{createtime}
+                createtime = #{createtime},
             </if>
+            <if test="pic != null and pic != ''">
+                pic = #{pic},
+            </if>
+            id=#{id}
         </set>
         <where>
             id = #{id}
@@ -46,4 +50,9 @@
             </foreach>
         </where>
     </delete>
+
+    <!--    void addItem(Item item);-->
+    <insert id="addItem" parameterType="Item">
+        insert into items VALUES (null , #{name} , #{price} ,  #{detail} ,"", #{createtime})
+    </insert>
 </mapper>

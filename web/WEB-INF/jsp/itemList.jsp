@@ -7,6 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>查询商品列表</title>
+	<script type="text/javascript">
+		function addItem() {
+			window.location.href = ${pageContext.request.contextPath}"/addUI.do";
+        }
+	</script>
 </head>
 <body> 
 <form action="${pageContext.request.contextPath }/item/queryitem.action" method="post">
@@ -42,7 +47,7 @@
 </c:forEach>
 
 </table>
-
+	<input type="button" onclick="addItem()" value="添加"/>
 	<input type="submit" value="删除"/>
 </form>
 </body>
